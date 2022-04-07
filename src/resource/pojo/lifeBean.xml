@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    创建life bean对象-->
+    <bean id="life" class="com.aking.learn.pojo.Life" init-method="initMethod" destroy-method="destroyMethod">
+<!--        property 完成属性注入-->
+        <property name="timeStamp" value="1000"></property>
+    </bean>
+
+<!--    对该配置文件所有bean都生效-->
+    <bean id="myBeanPost" class="com.aking.learn.service.MyBeanPost"></bean>
+</beans>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    创建 bean对象-->
+    <bean id="stu" class="com.aking.learn.pojo.Stu">
+<!--        property 完成属性注入-->
+        <property name="courses">
+            <array>
+                <value>java</value>
+                <value>go</value>
+            </array>
+        </property>
+        <property name="hobby">
+            <list>
+                <value>football</value>
+                <value>basketball</value>
+            </list>
+        </property>
+        <property name="map">
+            <map>
+                <entry key="name" value="aking"></entry>
+                <entry key="age" value="18"></entry>
+            </map>
+        </property>
+        <property name="labels">
+            <set>
+                <value>man</value>
+                <value>tall</value>
+            </set>
+        </property>
+        <property name="families">
+            <list>
+               <ref bean="family1"></ref>
+               <ref bean="family2"></ref>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="family1" class="com.aking.learn.pojo.Family">
+        <property name="relation" value="father"></property>
+    </bean>
+    <bean id="family2" class="com.aking.learn.pojo.Family">
+        <property name="relation" value="mather"></property>
+    </bean>
+</beans>

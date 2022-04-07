@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    创建 bean对象-->
+<!--    byName 注入值bean的id和类属性名称一致 -->
+<!--    byType 根据属性类型注入 -->
+    <bean id="student" class="com.aking.learn.pojo.autowire.Student" autowire="byName">
+    </bean>
+
+    <bean id="teacher" class="com.aking.learn.pojo.autowire.Teacher">
+        <property name="tName" value="yk"></property>
+    </bean>
+    <bean id="teacher1" class="com.aking.learn.pojo.autowire.Teacher">
+        <property name="tName" value="yy"></property>
+    </bean>
+</beans>

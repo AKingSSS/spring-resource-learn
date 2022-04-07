@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util
+       http://www.springframework.org/schema/util/spring-util.xsd
+">
+
+    <!--    创建 bean对象-->
+    <bean id="stu2" class="com.aking.learn.pojo.Stu">
+        <!--        property 完成属性注入-->
+        <property name="hobby" ref="hobby">
+        </property>
+    </bean>
+
+    <util:list id="hobby">
+        <value>football</value>
+        <value>basketball</value>
+        <value>run</value>
+    </util:list>
+
+
+</beans>

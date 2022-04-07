@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    创建 bean对象-->
+    <bean id="emp" class="com.aking.learn.pojo.Emp">
+        <property name="ename" value="ben"></property>
+        <property name="gender" value="男"></property>
+        <property name="dept">
+            <bean id="dept" class="com.aking.learn.pojo.Dept">
+                <property name="dname" value="design"></property>
+            </bean>
+        </property>
+    </bean>
+</beans>
