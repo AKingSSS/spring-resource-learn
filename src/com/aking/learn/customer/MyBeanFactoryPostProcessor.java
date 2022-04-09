@@ -15,6 +15,7 @@ public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 
     /**
      * 允许我们在工厂里所有的bean被加载进来后但是还没初始化前，对所有bean的属性进行修改也可以add属性值
+     * BeanFactoryPostProcessor是在spring容器加载了bean的定义文件之后，在bean实例化之前执行的
      * @param beanFactory
      * @throws BeansException
      */
